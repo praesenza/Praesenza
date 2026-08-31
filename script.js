@@ -55,6 +55,19 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(element);
     });
 
+    // Pre-fill the contact message when a pricing plan is chosen
+    const planButtons = document.querySelectorAll('.plan-select');
+    const messaggioField = document.getElementById('messaggio');
+
+    planButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            if (!messaggioField) return;
+            const plan = button.dataset.plan;
+            messaggioField.value = `Sono interessato al piano "${plan}". Vorrei avere maggiori informazioni.`;
+            messaggioField.dispatchEvent(new Event('input', { bubbles: true }));
+        });
+    });
+
     // Service detail modals
     const modalTriggers = document.querySelectorAll('[data-modal]');
     let lastFocusedElement = null;
