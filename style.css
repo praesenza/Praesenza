@@ -158,7 +158,7 @@ button:focus {
 .logo {
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 3px;
 }
 
 .logo-icon {
@@ -167,8 +167,8 @@ button:focus {
 }
 
 .logo-icon svg {
-    width: 40px;
-    height: 40px;
+    width: 23px;
+    height: 36px;
     display: block;
 }
 
@@ -798,12 +798,12 @@ button:focus {
 .footer-logo {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 3px;
 }
 
 .footer-logo .logo-icon svg {
-    width: 32px;
-    height: 32px;
+    width: 19px;
+    height: 30px;
 }
 
 .footer-logo .logo-word {
@@ -978,8 +978,8 @@ button:focus {
     }
 
     .logo-icon svg {
-        width: 32px;
-        height: 32px;
+        width: 19px;
+        height: 30px;
     }
 
     h2 {
