@@ -649,6 +649,16 @@ button:focus {
     outline: none;
 }
 
+.form-group input:-webkit-autofill,
+.form-group input:-webkit-autofill:hover,
+.form-group input:-webkit-autofill:focus {
+    -webkit-text-fill-color: #EDEEF0;
+    -webkit-box-shadow: 0 0 0 1000px #14171C inset;
+    box-shadow: 0 0 0 1000px #14171C inset;
+    caret-color: #EDEEF0;
+    transition: background-color 9999s ease-in-out 0s;
+}
+
 .form-group input.input-error {
     border-color: #FF6B6B;
 }
