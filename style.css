@@ -157,23 +157,35 @@ button:focus {
 
 .logo {
     display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.logo-icon {
+    display: flex;
+    flex-shrink: 0;
+}
+
+.logo-icon svg {
+    width: 40px;
+    height: 40px;
+    display: block;
+}
+
+.logo-text {
+    display: flex;
     flex-direction: column;
     gap: 2px;
 }
 
 .logo-word {
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 1.9rem;
+    font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: 0.01em;
     text-transform: uppercase;
     color: #F5F6F8;
     transition: color 0.3s ease;
-}
-
-.logo-word::first-letter {
-    color: #2E6BFF;
-    font-size: 1.2em;
 }
 
 .logo-tagline {
@@ -785,12 +797,17 @@ button:focus {
 
 .footer-logo {
     display: flex;
-    flex-direction: column;
-    gap: 2px;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-logo .logo-icon svg {
+    width: 32px;
+    height: 32px;
 }
 
 .footer-logo .logo-word {
-    font-size: 1.4rem;
+    font-size: 1.25rem;
 }
 
 .footer-links ul {
@@ -957,7 +974,12 @@ button:focus {
 
 @media (max-width: 480px) {
     .logo-word {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
+    }
+
+    .logo-icon svg {
+        width: 32px;
+        height: 32px;
     }
 
     h2 {
