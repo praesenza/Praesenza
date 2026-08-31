@@ -157,35 +157,23 @@ button:focus {
 
 .logo {
     display: flex;
-    align-items: baseline;
-    gap: 3px;
-}
-
-.logo-icon {
-    display: flex;
-    flex-shrink: 0;
-}
-
-.logo-icon svg {
-    width: 23px;
-    height: 36px;
-    display: block;
-}
-
-.logo-text {
-    display: flex;
     flex-direction: column;
     gap: 2px;
 }
 
 .logo-word {
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.9rem;
     font-weight: 700;
     letter-spacing: 0.01em;
     text-transform: uppercase;
     color: #F5F6F8;
     transition: color 0.3s ease;
+}
+
+.logo-word::first-letter {
+    color: #2E6BFF;
+    font-size: 1.2em;
 }
 
 .logo-tagline {
@@ -797,17 +785,12 @@ button:focus {
 
 .footer-logo {
     display: flex;
-    align-items: baseline;
-    gap: 3px;
-}
-
-.footer-logo .logo-icon svg {
-    width: 19px;
-    height: 30px;
+    flex-direction: column;
+    gap: 2px;
 }
 
 .footer-logo .logo-word {
-    font-size: 1.25rem;
+    font-size: 1.4rem;
 }
 
 .footer-links ul {
@@ -975,11 +958,6 @@ button:focus {
 @media (max-width: 480px) {
     .logo-word {
         font-size: 1.25rem;
-    }
-
-    .logo-icon svg {
-        width: 19px;
-        height: 30px;
     }
 
     h2 {
