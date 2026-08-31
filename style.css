@@ -157,7 +157,7 @@ button:focus {
 
 .logo {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     gap: 3px;
 }
 
@@ -797,7 +797,7 @@ button:focus {
 
 .footer-logo {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     gap: 3px;
 }
 
