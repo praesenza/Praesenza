@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praesenza - Siti Web Professionali per Piccole Attività</title>
+    <meta name="description" content="Creiamo siti web professionali per negozi, ristoranti e studi locali usando l'intelligenza artificiale. Prezzi accessibili, qualità garantita.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="navbar-brand">
+                    <a href="#home" class="logo">
+                        <span class="logo-word">Praesenza</span>
+                        <span class="logo-tagline">La tua presenza online conta.</span>
+                    </a>
+                </div>
+                
+                <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <ul class="nav-menu">
+                    <li><a href="#servizi" class="nav-link">Servizi</a></li>
+                    <li><a href="#perche" class="nav-link">Perché noi</a></li>
+                    <li><a href="#prezzi" class="nav-link">Prezzi</a></li>
+                    <li><a href="#contatti" class="nav-link">Contatti</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero scroll-reveal">
+        <div class="hero-content">
+            <span class="eyebrow-tag">Siti web professionali · per attività locali</span>
+            <h1 class="hero-title">La tua attività, finalmente online.</h1>
+            <p class="hero-subtitle">
+                Creiamo siti web professionali per negozi, ristoranti e studi locali, 
+                usando l'intelligenza artificiale per costruire velocemente e mantenere 
+                i prezzi bassi. Senza compromessi sulla qualità.
+            </p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servizi" class="services scroll-reveal">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Servizi</h2>
+            </div>
+
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <article class="service-card service-card--clickable" data-modal="modal-statica" tabindex="0" role="button" aria-haspopup="dialog">
+                    <h3>Pagina statica</h3>
+                    <p>
+                        Contenuti fissi e chiari: chi sei, cosa offri, dove trovarti.
+                        La soluzione più semplice, veloce e diretta per iniziare.
+                    </p>
+                    <span class="service-card-link">Scopri di più →</span>
+                </article>
+
+                <!-- Service 2 -->
+                <article class="service-card service-card--clickable" data-modal="modal-dinamica" tabindex="0" role="button" aria-haspopup="dialog">
+                    <h3>Pagina dinamica</h3>
+                    <p>
+                        Funzionalità interattive come prenotazioni e moduli, con
+                        contenuti che si aggiornano nel tempo.
+                    </p>
+                    <span class="service-card-link">Scopri di più →</span>
+                </article>
+
+                <!-- Service 3 -->
+                <article class="service-card service-card--clickable" data-modal="modal-manutenzione" tabindex="0" role="button" aria-haspopup="dialog">
+                    <h3>Manutenzione continua</h3>
+                    <p>
+                        Aggiornamenti, modifiche e assistenza dopo il lancio, così il sito
+                        resta sempre corretto e funzionante.
+                    </p>
+                    <span class="service-card-link">Scopri di più →</span>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Detail Modals -->
+    <div class="modal-overlay" id="modal-statica" aria-hidden="true">
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-statica-title">
+            <button class="modal-close" type="button" aria-label="Chiudi">&times;</button>
+            <span class="eyebrow-tag">Pagina statica</span>
+            <h3 id="modal-statica-title">Sempre la stessa, per tutti</h3>
+            <p>
+                Una pagina statica mostra le stesse informazioni a ogni visitatore, finché non
+                le aggiorniamo noi su tua richiesta. Non ha funzionalità che reagiscono a chi la
+                visita: è pensata per raccontare la tua attività in modo chiaro e diretto.
+            </p>
+            <p>
+                È la scelta giusta se hai bisogno di mostrare chi sei, cosa offri, orari, contatti
+                e magari qualche foto — senza sistemi di prenotazione o moduli complessi. È la
+                soluzione più veloce da realizzare, più economica da mantenere e più affidabile
+                per iniziare ad avere una presenza online professionale.
+            </p>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-dinamica" aria-hidden="true">
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-dinamica-title">
+            <button class="modal-close" type="button" aria-label="Chiudi">&times;</button>
+            <span class="eyebrow-tag">Pagina dinamica</span>
+            <h3 id="modal-dinamica-title">Reagisce a chi la visita</h3>
+            <p>
+                Una pagina dinamica include funzionalità che rispondono a ciò che fa chi la
+                visita: può ricevere prenotazioni, salvare messaggi da un modulo, mostrare
+                disponibilità o contenuti diversi a seconda della situazione.
+            </p>
+            <p>
+                È la scelta giusta se la tua attività gestisce appuntamenti, richieste online, o
+                ha bisogno di aggiornare spesso i contenuti in autonomia. Richiede più lavoro in
+                fase di realizzazione, ma ti dà uno strumento che lavora per te ogni giorno.
+            </p>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-manutenzione" aria-hidden="true">
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-manutenzione-title">
+            <button class="modal-close" type="button" aria-label="Chiudi">&times;</button>
+            <span class="eyebrow-tag">Manutenzione continua</span>
+            <h3 id="modal-manutenzione-title">Il sito resta al passo con te</h3>
+            <p>
+                Dopo il lancio, la manutenzione include piccoli aggiornamenti di testi, immagini
+                e contenuti, controlli periodici che tutto funzioni correttamente e assistenza
+                diretta se qualcosa non va o hai bisogno di una modifica.
+            </p>
+            <p>
+                È pensata per chi non vuole occuparsi personalmente della parte tecnica: ci
+                pensiamo noi, così tu puoi concentrarti sulla tua attività sapendo che il sito
+                resta sempre aggiornato, sicuro e online.
+            </p>
+        </div>
+    </div>
+
+    <!-- Why Praesenza Section -->
+    <section id="perche" class="why-section scroll-reveal">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Perché Praesenza</h2>
+            </div>
+
+            <div class="why-grid">
+                <div class="why-item">
+                    <h3>Prezzi chiari, zero sorprese</h3>
+                    <p>Sai esattamente cosa paghi fin dal primo preventivo: nessun costo nascosto, nessuna fattura a sorpresa. Solo un investimento che puoi pianificare.</p>
+                </div>
+
+                <div class="why-item">
+                    <h3>Online in pochi giorni, non mesi</h3>
+                    <p>Mentre altri ti fanno aspettare settimane, il tuo sito è pronto e pubblicato in pochi giorni — senza rinunciare a cura dei dettagli e qualità.</p>
+                </div>
+
+                <div class="why-item">
+                    <h3>Una persona, non un ticket</h3>
+                    <p>Parli sempre con chi conosce davvero il tuo progetto, non con un centralino di supporto. Risposte dirette, senza passaggi inutili.</p>
+                </div>
+
+                <div class="why-item">
+                    <h3>Trovato da chi ti cerca</h3>
+                    <p>Un sito veloce su ogni dispositivo, costruito per comparire su Google proprio quando i clienti della tua zona cercano quello che offri.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="prezzi" class="pricing scroll-reveal">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Prezzi</h2>
+            </div>
+
+            <div class="pricing-grid">
+                <!-- Pricing Tier 1 -->
+                <div class="pricing-card">
+                    <h3>Essenziale</h3>
+                    <div class="pricing-amount">
+                        <span class="price">€250</span>
+                    </div>
+                    <p class="pricing-maintenance">
+                        <span class="price-small">€20</span>/mese manutenzione
+                    </p>
+                    <ul class="pricing-features">
+                        <li>Sito 1 pagina</li>
+                        <li>5-6 sezioni</li>
+                        <li>Design responsive</li>
+                        <li>Form di contatto</li>
+                        <li>Mappa Google</li>
+                        <li>Ottimizzazione SEO di base</li>
+                    </ul>
+                    <a href="#contatti" class="btn btn-primary btn-block">Scegli questo piano</a>
+                </div>
+
+                <!-- Pricing Tier 2 -->
+                <div class="pricing-card pricing-featured">
+                    <div class="featured-badge">Più richiesto</div>
+                    <h3>Professionale</h3>
+                    <div class="pricing-amount">
+                        <span class="price">€400</span>
+                    </div>
+                    <p class="pricing-maintenance">
+                        <span class="price-small">€30</span>/mese manutenzione
+                    </p>
+                    <ul class="pricing-features">
+                        <li>Tutto della fascia Essenziale</li>
+                        <li>Sito multi-pagina</li>
+                        <li>Galleria foto</li>
+                        <li>Contenuti curati</li>
+                        <li>Ottimizzazione SEO avanzata</li>
+                    </ul>
+                    <a href="#contatti" class="btn btn-primary btn-block">Scegli questo piano</a>
+                </div>
+
+                <!-- Pricing Tier 3 -->
+                <div class="pricing-card">
+                    <h3>Avanzato</h3>
+                    <div class="pricing-amount">
+                        <span class="price">da €600</span>
+                    </div>
+                    <p class="pricing-maintenance">
+                        <span class="price-small">€45</span>/mese manutenzione
+                    </p>
+                    <ul class="pricing-features">
+                        <li>Tutto della fascia Professionale</li>
+                        <li>Sistema di prenotazione online</li>
+                        <li>Gestione appuntamenti</li>
+                        <li>Notifiche in tempo reale</li>
+                    </ul>
+                    <a href="#contatti" class="btn btn-primary btn-block">Scegli questo piano</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contatti" class="contact scroll-reveal">
+        <div class="container container-narrow">
+            <div class="section-header">
+                <h2 class="section-title">Parliamo del tuo progetto</h2>
+            </div>
+
+            <form class="contact-form" method="POST" action="https://api.web3forms.com/submit" novalidate>
+                <input type="hidden" name="access_key" value="b6b573e3-1506-466f-8e5c-7a649a835d79">
+                <input type="hidden" name="subject" value="Nuova richiesta dal sito Praesenza">
+                <input type="hidden" name="from_name" value="Sito Praesenza">
+                <input type="checkbox" name="botcheck" class="form-honeypot" tabindex="-1" autocomplete="off">
+
+                <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input
+                        type="text"
+                        id="nome"
+                        name="name"
+                        required
+                        aria-required="true"
+                        pattern="[A-Za-zÀ-ÖØ-öø-ÿ\s-]+"
+                        title="Solo lettere e trattini (-)"
+                        placeholder="Il tuo nome"
+                        aria-describedby="nome-error"
+                    >
+                    <span class="field-error" id="nome-error" aria-live="polite"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                        aria-required="true"
+                        placeholder="tua@email.com"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="messaggio">Messaggio</label>
+                    <textarea
+                        id="messaggio"
+                        name="message"
+                        rows="6"
+                        required
+                        aria-required="true"
+                        placeholder="Raccontaci del tuo progetto..."
+                    ></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block">Invia richiesta</button>
+                <p class="form-note" data-default-note>Risponderemo entro 24 ore.</p>
+            </form>
+
+            <div class="contact-email">
+                <span class="eyebrow-tag">Oppure contattaci direttamente</span>
+                <div class="contact-pills">
+                    <a href="mailto:praesenza@gmail.com" class="contact-pill">
+                        <svg class="contact-pill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                            <path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h15A1.5 1.5 0 0 1 21 6.5v11a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 17.5v-11Z"/>
+                            <path d="m3.5 6 8.5 6.5L20.5 6"/>
+                        </svg>
+                        praesenza@gmail.com
+                    </a>
+                    <a href="tel:+393759919351" class="contact-pill">
+                        <svg class="contact-pill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                            <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.7 21 3 13.3 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8Z"/>
+                        </svg>
+                        +39 375 991 93 51
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <a href="#home" class="footer-logo">
+                        <span class="logo-word">Praesenza</span>
+                        <span class="logo-tagline">La tua presenza online conta.</span>
+                    </a>
+                </div>
+                <div class="footer-section footer-links">
+                    <ul>
+                        <li><a href="#servizi">Servizi</a></li>
+                        <li><a href="#perche">Perché noi</a></li>
+                        <li><a href="#prezzi">Prezzi</a></li>
+                        <li><a href="#contatti">Contatti</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Praesenza. Il tuo sito web professionale.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
