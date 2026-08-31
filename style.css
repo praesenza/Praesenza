@@ -198,6 +198,7 @@ button:focus {
 }
 
 .nav-link {
+    display: inline-block;
     font-size: 0.95rem;
     font-weight: 400;
     color: #EDEEF0;
@@ -211,10 +212,14 @@ button:focus {
 .menu-toggle {
     display: none;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background: none;
     border: none;
     cursor: pointer;
     gap: 5px;
+    width: 44px;
+    height: 44px;
     padding: 8px;
 }
 
@@ -626,7 +631,7 @@ button:focus {
     border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 8px;
     font-family: 'Inter', sans-serif;
-    font-size: 0.95rem;
+    font-size: 1rem;
     color: #EDEEF0;
     background-color: #14171C;
     transition: all 0.3s ease;
@@ -849,8 +854,9 @@ button:focus {
         right: 0;
         background-color: rgba(20, 23, 28, 0.98);
         flex-direction: column;
-        gap: 16px;
-        padding: 32px;
+        align-items: stretch;
+        gap: 8px;
+        padding: 16px 24px 32px;
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease;
@@ -861,7 +867,13 @@ button:focus {
         border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
 
+    .nav-menu li {
+        width: 100%;
+    }
+
     .nav-link {
+        display: block;
+        padding: 12px 8px;
         font-size: 1rem;
     }
 
@@ -966,6 +978,14 @@ button:focus {
 
     .why-item {
         padding: 16px;
+    }
+
+    .modal-overlay {
+        padding: 16px;
+    }
+
+    .modal {
+        padding: 24px;
     }
 
     .footer-content {
