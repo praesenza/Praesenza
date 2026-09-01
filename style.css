@@ -866,10 +866,14 @@ button:focus {
         flex-direction: column;
         align-items: stretch;
         gap: 8px;
-        padding: 16px 24px 32px;
+        padding: 0 24px;
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.3s ease;
+        transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+
+    .nav-menu.active {
+        padding: 16px 24px 32px;
     }
 
     .nav-menu.active {
