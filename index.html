@@ -179,6 +179,49 @@
         </div>
     </section>
 
+    <!-- Plan Quiz / Simulator Section -->
+    <section id="simulatore" class="quiz scroll-reveal">
+        <div class="container container-narrow">
+            <div class="section-header">
+                <h2 class="section-title">Quale piano fa per te?</h2>
+            </div>
+
+            <div class="quiz-card" id="quiz-card">
+                <div class="quiz-step" data-step="1">
+                    <p class="quiz-question">Hai bisogno di un sistema di prenotazione o gestione appuntamenti online?</p>
+                    <div class="quiz-options">
+                        <button type="button" class="quiz-option" data-answer="booking-yes">Sì</button>
+                        <button type="button" class="quiz-option" data-answer="booking-no">No</button>
+                    </div>
+                </div>
+
+                <div class="quiz-step" data-step="2a" hidden>
+                    <p class="quiz-question">Ti servono anche integrazioni su misura (pagamenti online, gestionali, sistemi esterni)?</p>
+                    <div class="quiz-options">
+                        <button type="button" class="quiz-option" data-answer="custom-yes">Sì</button>
+                        <button type="button" class="quiz-option" data-answer="custom-no">No</button>
+                    </div>
+                </div>
+
+                <div class="quiz-step" data-step="2b" hidden>
+                    <p class="quiz-question">Ti basta una pagina sola per presentarti, o ti servono più pagine e funzionalità su misura?</p>
+                    <div class="quiz-options">
+                        <button type="button" class="quiz-option" data-answer="pages-one">Una pagina sola</button>
+                        <button type="button" class="quiz-option" data-answer="pages-more">Più pagine / su misura</button>
+                    </div>
+                </div>
+
+                <div class="quiz-result" data-step="result" hidden>
+                    <span class="eyebrow-tag">Il piano consigliato per te</span>
+                    <h3 id="quiz-result-title"></h3>
+                    <p id="quiz-result-desc"></p>
+                    <a href="#contatti" class="btn btn-primary plan-select" id="quiz-result-cta" data-plan="">Scegli questo piano</a>
+                    <button type="button" class="quiz-restart" id="quiz-restart">Ricomincia il quiz</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Pricing Section -->
     <section id="prezzi" class="pricing scroll-reveal">
         <div class="container">

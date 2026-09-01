@@ -68,6 +68,75 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Plan quiz / simulator
+    const quizCard = document.getElementById('quiz-card');
+    if (quizCard) {
+        const quizSteps = quizCard.querySelectorAll('[data-step]');
+        const resultTitle = document.getElementById('quiz-result-title');
+        const resultDesc = document.getElementById('quiz-result-desc');
+        const resultCta = document.getElementById('quiz-result-cta');
+        const restartBtn = document.getElementById('quiz-restart');
+
+        const plans = {
+            Essenziale: {
+                desc: 'Perfetto per farti conoscere online: una pagina chiara con foto, contatti e mappa. Il modo più rapido per iniziare.',
+                cta: 'Scegli questo piano'
+            },
+            Professionale: {
+                desc: 'Il piano giusto per te: oltre alla presenza online, gestisci prenotazioni e appuntamenti direttamente dal sito.',
+                cta: 'Scegli questo piano'
+            },
+            Avanzato: {
+                desc: 'Il tuo progetto ha bisogno di qualcosa su misura. Parliamone e prepariamo un preventivo dedicato.',
+                cta: 'Richiedi un preventivo'
+            }
+        };
+
+        function showQuizStep(stepName) {
+            quizSteps.forEach(step => {
+                step.hidden = step.dataset.step !== stepName;
+            });
+        }
+
+        function showQuizResult(planName) {
+            const plan = plans[planName];
+            resultTitle.textContent = planName;
+            resultDesc.textContent = plan.desc;
+            resultCta.textContent = plan.cta;
+            resultCta.dataset.plan = planName;
+            showQuizStep('result');
+        }
+
+        quizCard.querySelectorAll('[data-answer]').forEach(btn => {
+            btn.addEventListener('click', function() {
+                switch (btn.dataset.answer) {
+                    case 'booking-yes':
+                        showQuizStep('2a');
+                        break;
+                    case 'booking-no':
+                        showQuizStep('2b');
+                        break;
+                    case 'custom-yes':
+                        showQuizResult('Avanzato');
+                        break;
+                    case 'custom-no':
+                        showQuizResult('Professionale');
+                        break;
+                    case 'pages-one':
+                        showQuizResult('Essenziale');
+                        break;
+                    case 'pages-more':
+                        showQuizResult('Avanzato');
+                        break;
+                }
+            });
+        });
+
+        if (restartBtn) {
+            restartBtn.addEventListener('click', () => showQuizStep('1'));
+        }
+    }
+
     // Service detail modals
     const modalTriggers = document.querySelectorAll('[data-modal]');
     let lastFocusedElement = null;

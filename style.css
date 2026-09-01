@@ -495,6 +495,88 @@ button:focus {
     margin-bottom: 0;
 }
 
+/* ========== PLAN QUIZ / SIMULATOR ========== */
+
+.quiz {
+    padding: 96px 32px;
+    background-color: #1B1F26;
+}
+
+.quiz-card {
+    background-color: #14171C;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 48px 32px;
+    text-align: center;
+}
+
+.quiz-question {
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: #F5F6F8;
+    margin-bottom: 32px;
+}
+
+.quiz-options {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.quiz-option {
+    padding: 14px 28px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: #EDEEF0;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.quiz-option:hover,
+.quiz-option:focus-visible {
+    border-color: #4F82FF;
+    background-color: rgba(46, 107, 255, 0.1);
+    color: #82A6FF;
+    outline: none;
+}
+
+.quiz-result .eyebrow-tag {
+    margin-bottom: 0;
+}
+
+.quiz-result h3 {
+    margin-top: 16px;
+    font-size: 1.5rem;
+}
+
+.quiz-result p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: rgba(237, 238, 240, 0.8);
+    margin-bottom: 24px;
+}
+
+.quiz-restart {
+    display: block;
+    margin: 16px auto 0;
+    background: none;
+    border: none;
+    color: rgba(237, 238, 240, 0.5);
+    font-size: 0.85rem;
+    text-decoration: underline;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+}
+
+.quiz-restart:hover {
+    color: #82A6FF;
+}
+
 /* ========== PRICING SECTION ========== */
 
 .pricing {
