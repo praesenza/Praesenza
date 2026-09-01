@@ -259,16 +259,28 @@ button:focus {
 }
 
 .btn-primary {
-    background-color: #2E6BFF;
+    background: linear-gradient(135deg, #2E6BFF 0%, #4F82FF 100%);
     color: #F5F6F8;
-    border-color: #2E6BFF;
+    border-color: transparent;
 }
 
 .btn-primary:hover {
-    background-color: #4F82FF;
-    border-color: #4F82FF;
+    background: linear-gradient(135deg, #3D77FF 0%, #6C97FF 100%);
+    border-color: transparent;
     transform: translateY(-2px);
     box-shadow: 0 16px 32px rgba(46, 107, 255, 0.35);
+}
+
+.btn-light {
+    background-color: #F5F6F8;
+    color: #14171C;
+    border-color: transparent;
+}
+
+.btn-light:hover {
+    background-color: #FFFFFF;
+    transform: translateY(-2px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
 }
 
 .btn-block {
@@ -351,6 +363,23 @@ button:focus {
     border-color: #2E6BFF;
     box-shadow: 0 16px 32px rgba(46, 107, 255, 0.18);
     transform: translateY(-4px);
+}
+
+.service-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 24px;
+    background-color: rgba(46, 107, 255, 0.12);
+    border-radius: 10px;
+    color: #4F82FF;
+}
+
+.service-icon svg {
+    width: 24px;
+    height: 24px;
 }
 
 .service-card h3 {
@@ -493,6 +522,70 @@ button:focus {
     line-height: 1.7;
     color: rgba(237, 238, 240, 0.75);
     margin-bottom: 0;
+}
+
+/* ========== HOW WE WORK / PROCESS ========== */
+
+.process {
+    padding: 96px 32px;
+    background-color: #14171C;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+}
+
+.process-step {
+    padding-top: 24px;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.process-number {
+    display: block;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #4F82FF;
+    margin-bottom: 16px;
+}
+
+.process-step h3 {
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+}
+
+.process-step p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: rgba(237, 238, 240, 0.75);
+    margin-bottom: 0;
+}
+
+/* ========== CTA BANNER ========== */
+
+.cta-banner {
+    padding: 64px 32px;
+    background: linear-gradient(120deg, #1F3D8F 0%, #2E6BFF 100%);
+}
+
+.cta-banner-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.cta-banner-title {
+    background: none;
+    -webkit-background-clip: unset;
+    background-clip: unset;
+    color: #F5F6F8;
+    font-size: 1.75rem;
+    margin-bottom: 0;
+    max-width: 500px;
 }
 
 /* ========== PLAN QUIZ / SIMULATOR ========== */
@@ -920,8 +1013,17 @@ button:focus {
         grid-template-columns: 1fr;
     }
 
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .pricing-grid {
         grid-template-columns: 1fr;
+    }
+
+    .cta-banner-inner {
+        flex-direction: column;
+        text-align: center;
     }
 
     .footer-content {
@@ -1007,6 +1109,23 @@ button:focus {
 
     .why-section {
         padding: 64px 24px;
+    }
+
+    .process {
+        padding: 64px 24px;
+    }
+
+    .process-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .cta-banner {
+        padding: 48px 24px;
+    }
+
+    .cta-banner-title {
+        font-size: 1.5rem;
     }
 
     .pricing {
