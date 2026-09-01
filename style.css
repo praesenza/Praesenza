@@ -293,28 +293,13 @@ button:focus {
 .hero {
     padding: 128px 32px 96px;
     margin-top: 64px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 48px;
-    max-width: 1400px;
-    margin-left: auto;
-    margin-right: auto;
+    display: flex;
+    justify-content: center;
 }
 
 .hero-content {
-    max-width: 560px;
-}
-
-.hero-visual {
-    width: 100%;
-}
-
-.hero-visual img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 12px;
+    max-width: 700px;
+    text-align: center;
 }
 
 .hero-content .eyebrow-tag {
@@ -1025,23 +1010,7 @@ button:focus {
     }
 
     .hero {
-        grid-template-columns: 1fr;
         padding: 128px 32px 64px;
-    }
-
-    .hero-content {
-        max-width: 100%;
-        text-align: center;
-    }
-
-    .hero-content .eyebrow-tag {
-        display: inline-block;
-    }
-
-    .hero-visual {
-        order: -1;
-        max-width: 420px;
-        margin: 0 auto;
     }
 
     .services-grid {
