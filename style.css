@@ -274,15 +274,10 @@ button:focus {
 /* ========== HERO SECTION ========== */
 
 .hero {
-    padding: 180px 32px 140px;
-    margin-top: 0;
+    padding: 128px 32px 96px;
+    margin-top: 100px;
     display: flex;
     justify-content: center;
-    background:
-        linear-gradient(180deg, rgba(14, 16, 20, 0.75) 0%, rgba(14, 16, 20, 0.55) 40%, rgba(14, 16, 20, 0.92) 100%),
-        url('images/hero-laptop.png');
-    background-size: cover;
-    background-position: center;
 }
 
 .hero-content {
@@ -509,34 +504,6 @@ button:focus {
     font-size: 0.95rem;
     line-height: 1.7;
     color: rgba(237, 238, 240, 0.75);
-    margin-bottom: 0;
-}
-
-/* ========== REACH SECTION ========== */
-
-.reach {
-    padding: 160px 32px;
-    background:
-        linear-gradient(180deg, rgba(14, 16, 20, 0.55) 0%, rgba(14, 16, 20, 0.4) 45%, rgba(14, 16, 20, 0.85) 100%),
-        url('images/globe.png');
-    background-size: cover;
-    background-position: center;
-}
-
-.reach-inner {
-    max-width: 640px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.reach-inner h2 {
-    margin-bottom: 16px;
-}
-
-.reach-inner p {
-    font-size: 1.05rem;
-    line-height: 1.7;
-    color: rgba(237, 238, 240, 0.85);
     margin-bottom: 0;
 }
 
@@ -1025,7 +992,7 @@ button:focus {
     }
 
     .hero {
-        padding: 160px 24px 96px;
+        padding: 128px 32px 64px;
     }
 
     .services-grid {
@@ -1111,7 +1078,7 @@ button:focus {
     }
 
     .hero {
-        padding: 140px 24px 64px;
+        padding: 96px 0 32px;
     }
 
     .hero-subtitle {
@@ -1132,10 +1099,6 @@ button:focus {
 
     .why-section {
         padding: 64px 24px;
-    }
-
-    .reach {
-        padding: 96px 24px;
     }
 
     .process {
@@ -1201,7 +1164,7 @@ button:focus {
     }
 
     .hero {
-        padding: 120px 16px 48px;
+        padding: 96px 16px 24px;
     }
 
     .btn {
