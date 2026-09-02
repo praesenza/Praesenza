@@ -274,34 +274,24 @@ button:focus {
 /* ========== HERO SECTION ========== */
 
 .hero {
-    padding: 96px 32px;
-    margin-top: 100px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 48px;
-    max-width: 1400px;
-    margin-left: auto;
-    margin-right: auto;
+    padding: 180px 32px 140px;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    background:
+        linear-gradient(180deg, rgba(14, 16, 20, 0.75) 0%, rgba(14, 16, 20, 0.55) 40%, rgba(14, 16, 20, 0.92) 100%),
+        url('images/hero-laptop.png');
+    background-size: cover;
+    background-position: center;
 }
 
 .hero-content {
-    max-width: 560px;
+    max-width: 700px;
+    text-align: center;
 }
 
 .hero-content .eyebrow-tag {
     display: inline-block;
-}
-
-.hero-visual {
-    width: 100%;
-}
-
-.hero-visual img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 12px;
 }
 
 .hero-title {
@@ -525,33 +515,28 @@ button:focus {
 /* ========== REACH SECTION ========== */
 
 .reach {
-    padding: 96px 32px;
-    background-color: #1B1F26;
+    padding: 160px 32px;
+    background:
+        linear-gradient(180deg, rgba(14, 16, 20, 0.55) 0%, rgba(14, 16, 20, 0.4) 45%, rgba(14, 16, 20, 0.85) 100%),
+        url('images/globe.png');
+    background-size: cover;
+    background-position: center;
 }
 
 .reach-inner {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 48px;
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center;
 }
 
-.reach-visual img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.reach-content h2 {
+.reach-inner h2 {
     margin-bottom: 16px;
 }
 
-.reach-content p {
+.reach-inner p {
     font-size: 1.05rem;
     line-height: 1.7;
-    color: rgba(237, 238, 240, 0.8);
+    color: rgba(237, 238, 240, 0.85);
     margin-bottom: 0;
 }
 
@@ -1040,19 +1025,7 @@ button:focus {
     }
 
     .hero {
-        grid-template-columns: 1fr;
-        padding: 128px 32px 64px;
-    }
-
-    .hero-content {
-        max-width: 100%;
-        text-align: center;
-    }
-
-    .hero-visual {
-        order: -1;
-        max-width: 480px;
-        margin: 0 auto;
+        padding: 160px 24px 96px;
     }
 
     .services-grid {
@@ -1061,16 +1034,6 @@ button:focus {
 
     .why-grid {
         grid-template-columns: 1fr;
-    }
-
-    .reach-inner {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .reach-visual {
-        max-width: 480px;
-        margin: 0 auto;
     }
 
     .process-grid {
@@ -1148,7 +1111,7 @@ button:focus {
     }
 
     .hero {
-        padding: 96px 0 32px;
+        padding: 140px 24px 64px;
     }
 
     .hero-subtitle {
@@ -1172,7 +1135,7 @@ button:focus {
     }
 
     .reach {
-        padding: 64px 24px;
+        padding: 96px 24px;
     }
 
     .process {
@@ -1238,7 +1201,7 @@ button:focus {
     }
 
     .hero {
-        padding: 96px 16px 24px;
+        padding: 120px 16px 48px;
     }
 
     .btn {
