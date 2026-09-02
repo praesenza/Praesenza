@@ -297,7 +297,7 @@ button:focus {
     font-size: 1.1rem;
     line-height: 1.7;
     color: rgba(237, 238, 240, 0.75);
-    margin-bottom: 32px;
+    margin: 0 auto 32px;
     max-width: 550px;
 }
 
