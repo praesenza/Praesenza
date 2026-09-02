@@ -157,35 +157,18 @@ button:focus {
 
 .logo {
     display: flex;
-    flex-direction: column;
-    gap: 2px;
+    align-items: center;
 }
 
-.logo-word {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 1.9rem;
-    font-weight: 700;
-    letter-spacing: 0.01em;
-    text-transform: uppercase;
-    color: #F5F6F8;
-    transition: color 0.3s ease;
+.logo-img {
+    height: 48px;
+    width: auto;
+    display: block;
+    transition: opacity 0.2s ease;
 }
 
-.logo-word::first-letter {
-    color: #2E6BFF;
-    font-size: 1.2em;
-}
-
-.logo-tagline {
-    font-family: 'Inter', sans-serif;
-    font-size: 0.7rem;
-    font-weight: 400;
-    letter-spacing: 0.01em;
-    color: rgba(237, 238, 240, 0.55);
-}
-
-.logo:hover .logo-word {
-    color: #82A6FF;
+.logo:hover .logo-img {
+    opacity: 0.85;
 }
 
 .nav-menu {
@@ -292,7 +275,7 @@ button:focus {
 
 .hero {
     padding: 128px 32px 96px;
-    margin-top: 64px;
+    margin-top: 80px;
     display: flex;
     justify-content: center;
 }
@@ -968,12 +951,11 @@ button:focus {
 
 .footer-logo {
     display: flex;
-    flex-direction: column;
-    gap: 2px;
+    align-items: center;
 }
 
-.footer-logo .logo-word {
-    font-size: 1.4rem;
+.footer-logo .logo-img {
+    height: 44px;
 }
 
 .footer-links ul {
@@ -1051,7 +1033,7 @@ button:focus {
 
     .nav-menu {
         position: absolute;
-        top: 64px;
+        top: 80px;
         left: 0;
         right: 0;
         background-color: rgba(20, 23, 28, 0.98);
@@ -1169,8 +1151,8 @@ button:focus {
 }
 
 @media (max-width: 480px) {
-    .logo-word {
-        font-size: 1.25rem;
+    .logo-img {
+        height: 44px;
     }
 
     h2 {
