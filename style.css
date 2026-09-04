@@ -310,15 +310,15 @@ button:focus {
 .hero-bg-lines path {
     fill: none;
     stroke: var(--pz-paper);
-    stroke-width: 1.4;
-    opacity: 0.06;
+    stroke-width: 1.6;
+    opacity: 0.16;
 }
 
 .hero-bg-accent path {
     fill: none;
     stroke: var(--pz-accent-light);
-    stroke-width: 2;
-    opacity: 0.3;
+    stroke-width: 2.5;
+    opacity: 0.55;
 }
 
 .hero-content {
@@ -774,9 +774,9 @@ button:focus {
 
 .tier-bars span {
     display: block;
-    width: 14px;
+    width: 16px;
     border-radius: 2px;
-    background-color: rgba(255, 255, 255, 0.18);
+    background-color: rgba(255, 255, 255, 0.35);
 }
 
 .tier-bars .tier-bar-accent {
@@ -860,10 +860,10 @@ button:focus {
     background: repeating-radial-gradient(
         circle,
         transparent 0,
-        transparent 59px,
-        rgba(79, 130, 255, 0.08) 60px,
-        rgba(79, 130, 255, 0.08) 61px,
-        transparent 62px,
+        transparent 58px,
+        rgba(79, 130, 255, 0.16) 60px,
+        rgba(79, 130, 255, 0.16) 62px,
+        transparent 64px,
         transparent 120px
     );
     pointer-events: none;
