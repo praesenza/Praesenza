@@ -2,6 +2,19 @@
    PRAESENZA - Landing Page Stylesheet
    ======================================== */
 
+/* ========== DESIGN TOKENS ========== */
+
+:root {
+    --pz-ink: #14171C;
+    --pz-ink-2: #1B1F26;
+    --pz-ink-3: #0E1013;
+    --pz-paper: #F5F6F8;
+    --pz-text: #EDEEF0;
+    --pz-accent: #2E6BFF;
+    --pz-accent-light: #4F82FF;
+    --pz-accent-lighter: #82A6FF;
+}
+
 /* ========== RESET & BASE STYLES ========== */
 
 * {
@@ -278,11 +291,41 @@ button:focus {
     margin-top: 116px;
     display: flex;
     justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.hero-bg svg {
+    width: 100%;
+    height: 100%;
+}
+
+.hero-bg-lines path {
+    fill: none;
+    stroke: var(--pz-paper);
+    stroke-width: 1.4;
+    opacity: 0.06;
+}
+
+.hero-bg-accent path {
+    fill: none;
+    stroke: var(--pz-accent-light);
+    stroke-width: 2;
+    opacity: 0.3;
 }
 
 .hero-content {
     max-width: 700px;
     text-align: center;
+    position: relative;
+    z-index: 1;
 }
 
 .hero-content .eyebrow-tag {
@@ -534,6 +577,20 @@ button:focus {
     margin-bottom: 16px;
 }
 
+.process-bar {
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+
+.process-bar span {
+    display: block;
+    height: 100%;
+    background-color: var(--pz-accent-light);
+}
+
 .process-step h3 {
     font-size: 1.25rem;
     margin-bottom: 8px;
@@ -707,6 +764,25 @@ button:focus {
     letter-spacing: 0.1em;
 }
 
+.tier-bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 6px;
+    height: 48px;
+    margin-bottom: 20px;
+}
+
+.tier-bars span {
+    display: block;
+    width: 14px;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.18);
+}
+
+.tier-bars .tier-bar-accent {
+    background-color: var(--pz-accent-light);
+}
+
 .pricing-card h3 {
     font-size: 1.75rem;
     margin-bottom: 24px;
@@ -768,6 +844,35 @@ button:focus {
 .contact {
     padding: 96px 32px;
     background-color: #1B1F26;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -160px;
+    transform: translateY(-50%);
+    width: 560px;
+    height: 560px;
+    border-radius: 50%;
+    background: repeating-radial-gradient(
+        circle,
+        transparent 0,
+        transparent 59px,
+        rgba(79, 130, 255, 0.08) 60px,
+        rgba(79, 130, 255, 0.08) 61px,
+        transparent 62px,
+        transparent 120px
+    );
+    pointer-events: none;
+    z-index: 0;
+}
+
+.contact .container {
+    position: relative;
+    z-index: 1;
 }
 
 .contact-form {
@@ -1075,6 +1180,17 @@ button:focus {
 
     .hero {
         padding: 96px 0 32px;
+    }
+
+    .hero-bg-lines path:nth-child(n + 4) {
+        display: none;
+    }
+
+    .contact::before {
+        width: 360px;
+        height: 360px;
+        right: -140px;
+        opacity: 0.6;
     }
 
     .hero-subtitle {
