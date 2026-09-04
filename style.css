@@ -618,43 +618,6 @@ button:focus {
     border-left: 3px solid #2E6BFF;
 }
 
-.why-icon {
-    display: flex;
-    align-items: center;
-    width: 56px;
-    height: 56px;
-    margin-bottom: 20px;
-}
-
-.why-icon svg {
-    width: 100%;
-    height: 100%;
-}
-
-.why-icon .dot-accent {
-    fill: var(--pz-accent-light);
-}
-
-.why-icon .ring-outline {
-    fill: none;
-    stroke: rgba(237, 238, 240, 0.35);
-    stroke-width: 2;
-}
-
-.why-icon .ring-outline-soft {
-    stroke: rgba(237, 238, 240, 0.18);
-}
-
-.why-icon .bar-line {
-    stroke: rgba(237, 238, 240, 0.35);
-    stroke-width: 3;
-    stroke-linecap: round;
-}
-
-.why-icon .bar-line-accent {
-    stroke: var(--pz-accent-light);
-}
-
 .why-item h3 {
     font-size: 1.5rem;
     margin-bottom: 8px;
