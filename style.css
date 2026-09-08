@@ -145,11 +145,11 @@ button:focus-visible {
     top: 0;
     left: 0;
     right: 0;
-    background-color: rgba(255, 255, 255, 0.85);
+    background: linear-gradient(135deg, rgba(18, 24, 52, 0.92) 0%, rgba(36, 21, 70, 0.92) 100%);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     z-index: 1000;
-    border-bottom: 1px solid var(--pz-border);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .navbar {
@@ -198,12 +198,12 @@ button:focus-visible {
     display: inline-block;
     font-size: 0.95rem;
     font-weight: 500;
-    color: var(--pz-body);
+    color: rgba(255, 255, 255, 0.75);
     transition: color 0.2s ease;
 }
 
 .nav-link:hover {
-    color: var(--pz-ink);
+    color: #FFFFFF;
 }
 
 .menu-toggle {
@@ -223,7 +223,7 @@ button:focus-visible {
 .menu-toggle span {
     width: 24px;
     height: 2px;
-    background-color: var(--pz-ink);
+    background-color: #FFFFFF;
     transition: all 0.3s ease;
     border-radius: 2px;
 }
@@ -1241,7 +1241,7 @@ button:focus-visible {
         top: 112px;
         left: 0;
         right: 0;
-        background-color: rgba(255, 255, 255, 0.98);
+        background: linear-gradient(135deg, rgba(18, 24, 52, 0.98) 0%, rgba(36, 21, 70, 0.98) 100%);
         flex-direction: column;
         align-items: stretch;
         gap: 8px;
@@ -1254,7 +1254,7 @@ button:focus-visible {
     .nav-menu.active {
         max-height: 500px;
         padding: 16px 24px 28px;
-        border-bottom: 1px solid var(--pz-border);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
 
     .nav-menu li {
