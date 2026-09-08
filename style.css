@@ -926,7 +926,7 @@ button:focus-visible {
 
 .contact {
     padding: 104px 32px;
-    background: linear-gradient(135deg, var(--pz-dark) 0%, var(--pz-dark-2) 100%);
+    background-color: var(--pz-bg-alt);
     position: relative;
     overflow: hidden;
 }
@@ -944,12 +944,12 @@ button:focus-visible {
         circle,
         transparent 0,
         transparent 58px,
-        rgba(90, 140, 255, 0.16) 60px,
-        rgba(90, 140, 255, 0.16) 62px,
+        rgba(46, 107, 255, 0.14) 60px,
+        rgba(46, 107, 255, 0.14) 62px,
         transparent 64px,
         transparent 178px,
-        rgba(159, 122, 240, 0.16) 180px,
-        rgba(159, 122, 240, 0.16) 182px,
+        rgba(123, 79, 224, 0.14) 180px,
+        rgba(123, 79, 224, 0.14) 182px,
         transparent 184px,
         transparent 240px
     );
@@ -960,10 +960,6 @@ button:focus-visible {
 .contact .container {
     position: relative;
     z-index: 1;
-}
-
-.contact .section-title {
-    color: #FFFFFF;
 }
 
 .contact-form {
