@@ -5,19 +5,23 @@
 /* ========== DESIGN TOKENS ========== */
 
 :root {
-    --pz-bg: #FFFFFF;
-    --pz-bg-alt: #F7F8FA;
+    --pz-bg: #FDFDFF;
+    --pz-bg-alt: #F4F5FD;
     --pz-surface: #FFFFFF;
-    --pz-ink: #0B0F14;
-    --pz-body: #525C66;
-    --pz-muted: #8A929B;
-    --pz-border: #E6E9ED;
-    --pz-border-strong: #D6DAE0;
+    --pz-ink: #0B0F1E;
+    --pz-body: #525C6E;
+    --pz-muted: #8A91A3;
+    --pz-border: #E5E7F0;
+    --pz-border-strong: #D3D7E4;
     --pz-accent: #2E6BFF;
     --pz-accent-dark: #1B4FD8;
     --pz-accent-soft: #EEF3FF;
-    --pz-dark: #0F1419;
-    --pz-dark-2: #171D25;
+    --pz-violet: #7B4FE0;
+    --pz-violet-dark: #5B3BC4;
+    --pz-violet-soft: #F1ECFD;
+    --pz-grad: linear-gradient(135deg, #2E6BFF 0%, #7B4FE0 100%);
+    --pz-dark: #121834;
+    --pz-dark-2: #241546;
 
     --pz-radius: 16px;
     --pz-radius-sm: 10px;
@@ -252,16 +256,16 @@ button:focus-visible {
 }
 
 .btn-primary {
-    background-color: var(--pz-accent);
+    background: var(--pz-grad);
     color: #FFFFFF;
     box-shadow: var(--pz-shadow-accent);
 }
 
 .btn-primary:hover {
-    background-color: var(--pz-accent-dark);
+    background: linear-gradient(135deg, #1B4FD8 0%, #6438CE 100%);
     color: #FFFFFF;
     transform: translateY(-2px);
-    box-shadow: 0 12px 28px rgba(46, 107, 255, 0.32);
+    box-shadow: 0 14px 30px rgba(85, 71, 224, 0.35);
 }
 
 .btn-light {
@@ -290,7 +294,10 @@ button:focus-visible {
     justify-content: center;
     position: relative;
     overflow: hidden;
-    background-color: var(--pz-bg);
+    background:
+        radial-gradient(58% 52% at 12% -5%, rgba(46, 107, 255, 0.13), transparent 70%),
+        radial-gradient(52% 48% at 88% 8%, rgba(123, 79, 224, 0.14), transparent 70%),
+        var(--pz-bg);
 }
 
 .hero-bg {
@@ -314,9 +321,9 @@ button:focus-visible {
 
 .hero-bg-accent path {
     fill: none;
-    stroke: var(--pz-accent);
+    stroke: url(#heroAccent);
     stroke-width: 2.5;
-    opacity: 0.35;
+    opacity: 0.55;
 }
 
 .hero-bg-ring {
@@ -346,11 +353,11 @@ button:focus-visible {
 }
 
 .hero-bg-dots span:nth-child(2) {
-    background-color: rgba(46, 107, 255, 0.45);
+    background-color: var(--pz-violet);
 }
 
 .hero-bg-dots span:nth-child(3) {
-    background-color: rgba(46, 107, 255, 0.2);
+    background-color: rgba(123, 79, 224, 0.3);
 }
 
 .hero-content {
@@ -435,9 +442,9 @@ button:focus-visible {
     width: 15%;
     aspect-ratio: 1 / 1;
     transform: translate(-50%, -50%);
-    background-color: var(--pz-accent);
+    background: var(--pz-grad);
     border-radius: 5px;
-    box-shadow: 0 10px 24px rgba(46, 107, 255, 0.3);
+    box-shadow: 0 10px 24px rgba(85, 71, 224, 0.32);
 }
 
 .service-visual--dynamic .service-visual-module--ghost-1 {
@@ -455,12 +462,13 @@ button:focus-visible {
 }
 
 .service-visual--care {
-    background-image: repeating-linear-gradient(45deg, rgba(46, 107, 255, 0.12) 0 1px, transparent 1px 12px);
+    background-color: #F5F2FD;
+    background-image: repeating-linear-gradient(45deg, rgba(123, 79, 224, 0.14) 0 1px, transparent 1px 12px);
 }
 
 .service-visual-module--outline {
     background: none;
-    border: 2px solid var(--pz-accent);
+    border: 2px solid var(--pz-violet);
     box-shadow: none;
 }
 
@@ -479,6 +487,11 @@ button:focus-visible {
 .service-icon svg {
     width: 22px;
     height: 22px;
+}
+
+.service-card:nth-child(3) .service-icon {
+    background-color: var(--pz-violet-soft);
+    color: var(--pz-violet);
 }
 
 .service-card h3 {
@@ -608,6 +621,11 @@ button:focus-visible {
     border-left: 3px solid var(--pz-accent);
 }
 
+.why-item:nth-child(2),
+.why-item:nth-child(3) {
+    border-left-color: var(--pz-violet);
+}
+
 .why-item h3 {
     font-size: 1.3rem;
     margin-bottom: 10px;
@@ -657,7 +675,7 @@ button:focus-visible {
 .process-bar span {
     display: block;
     height: 100%;
-    background-color: var(--pz-accent);
+    background: var(--pz-grad);
 }
 
 .process-step h3 {
@@ -676,7 +694,7 @@ button:focus-visible {
 .cta-banner {
     padding: 72px 32px;
     background:
-        linear-gradient(120deg, rgba(15, 20, 25, 0.92) 0%, rgba(27, 79, 216, 0.92) 100%),
+        linear-gradient(120deg, rgba(27, 79, 216, 0.94) 0%, rgba(91, 59, 196, 0.94) 100%),
         url('images/hero-wave.png');
     background-size: cover;
     background-position: center;
@@ -810,8 +828,8 @@ button:focus-visible {
 }
 
 .pricing-featured {
-    border-color: var(--pz-accent);
-    box-shadow: 0 12px 40px rgba(46, 107, 255, 0.16);
+    border-color: var(--pz-violet);
+    box-shadow: 0 14px 44px rgba(85, 71, 224, 0.2);
 }
 
 .featured-badge {
@@ -819,7 +837,7 @@ button:focus-visible {
     top: -14px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: var(--pz-accent);
+    background: var(--pz-grad);
     color: #FFFFFF;
     padding: 7px 16px;
     font-size: 0.75rem;
@@ -845,8 +863,8 @@ button:focus-visible {
 }
 
 .tier-bars .tier-bar-accent {
-    background-color: var(--pz-accent);
-    box-shadow: 0 8px 18px rgba(46, 107, 255, 0.28);
+    background: var(--pz-grad);
+    box-shadow: 0 8px 18px rgba(85, 71, 224, 0.3);
 }
 
 .pricing-card h3 {
@@ -926,10 +944,14 @@ button:focus-visible {
         circle,
         transparent 0,
         transparent 58px,
-        rgba(46, 107, 255, 0.12) 60px,
-        rgba(46, 107, 255, 0.12) 62px,
+        rgba(46, 107, 255, 0.14) 60px,
+        rgba(46, 107, 255, 0.14) 62px,
         transparent 64px,
-        transparent 120px
+        transparent 178px,
+        rgba(123, 79, 224, 0.14) 180px,
+        rgba(123, 79, 224, 0.14) 182px,
+        transparent 184px,
+        transparent 240px
     );
     pointer-events: none;
     z-index: 0;
@@ -1102,9 +1124,20 @@ button:focus-visible {
 /* ========== FOOTER ========== */
 
 .footer {
-    background-color: var(--pz-dark);
+    position: relative;
+    background: linear-gradient(135deg, var(--pz-dark) 0%, var(--pz-dark-2) 100%);
     color: rgba(255, 255, 255, 0.7);
     padding: 56px 32px 24px;
+}
+
+.footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--pz-grad);
 }
 
 .footer-content {
