@@ -266,6 +266,8 @@ document.addEventListener('DOMContentLoaded', function() {
         if (consentField && submitBtn) {
             consentField.addEventListener('change', function() {
                 submitBtn.disabled = !consentField.checked;
+                // TEMP DEBUG — rimuovere dopo la verifica
+                console.log('[privacy-consent] checked:', consentField.checked, '-> submitBtn.disabled:', submitBtn.disabled);
             });
         }
 
