@@ -195,6 +195,30 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // FAQ accordion — only one question open at a time
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        const answer = item.querySelector('.faq-answer');
+
+        question.addEventListener('click', function() {
+            const isOpen = question.getAttribute('aria-expanded') === 'true';
+
+            faqItems.forEach(other => {
+                other.classList.remove('active');
+                other.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                other.querySelector('.faq-answer').style.maxHeight = null;
+            });
+
+            if (!isOpen) {
+                item.classList.add('active');
+                question.setAttribute('aria-expanded', 'true');
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+            }
+        });
+    });
+
     // Handle form submission (sends via Web3Forms — no backend needed)
     const contactForm = document.querySelector('.contact-form');
     if (contactForm) {
