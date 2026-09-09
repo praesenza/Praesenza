@@ -302,6 +302,19 @@ button:focus-visible {
     display: block;
 }
 
+.btn-accent {
+    background-color: var(--pz-accent);
+    color: #FFFFFF;
+    box-shadow: 0 8px 24px rgba(176, 137, 104, 0.3);
+}
+
+.btn-accent:hover {
+    background-color: var(--pz-accent-dark);
+    color: #FFFFFF;
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(176, 137, 104, 0.4);
+}
+
 /* ========== HERO SECTION ========== */
 
 .hero {
@@ -382,6 +395,79 @@ button:focus-visible {
     color: var(--pz-body);
     margin: 0 auto 32px;
     max-width: 580px;
+}
+
+.hero-cta-group {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.hero-cta-icon {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+/* Desktop: show "Contattaci" (smooth-scrolls to #contatti), hide the call button and FAB */
+.hero-cta--call {
+    display: none;
+}
+
+.hero-cta--contact {
+    display: inline-flex;
+}
+
+.phone-fab {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    /* Mobile: show "Chiama ora" instead, plus a floating call button */
+    .hero-cta--call {
+        display: inline-flex;
+    }
+
+    .hero-cta--contact {
+        display: none;
+    }
+
+    .hero-cta {
+        min-height: 48px;
+    }
+
+    .phone-fab {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background-color: var(--pz-accent);
+        color: #FFFFFF;
+        box-shadow: 0 10px 28px rgba(176, 137, 104, 0.45);
+        z-index: 900;
+        transition: transform 0.2s ease, background-color 0.2s ease;
+    }
+
+    .phone-fab:hover {
+        background-color: var(--pz-accent-dark);
+        transform: translateY(-2px);
+    }
+
+    .phone-fab svg {
+        width: 24px;
+        height: 24px;
+    }
 }
 
 /* ========== SECTION HEADERS ========== */
