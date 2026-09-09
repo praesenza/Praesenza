@@ -179,6 +179,7 @@ button:focus-visible {
     width: auto;
     display: block;
     transition: opacity 0.2s ease;
+    filter: brightness(1.15) drop-shadow(0 0 14px rgba(90, 140, 255, 0.4));
 }
 
 .logo:hover .logo-img {
