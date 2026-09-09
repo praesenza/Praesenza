@@ -822,7 +822,7 @@ button:focus-visible {
 
 .quiz {
     padding: 104px 32px;
-    background-color: var(--pz-bg-alt);
+    background-color: var(--pz-bg);
 }
 
 .quiz-card {
