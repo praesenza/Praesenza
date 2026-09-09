@@ -260,8 +260,22 @@ document.addEventListener('DOMContentLoaded', function() {
             nomeField.addEventListener('input', validateNomeLive);
         }
 
+        // Keep the submit button disabled until the privacy consent is checked
+        const consentField = document.getElementById('consenso-privacy');
+
+        if (consentField && submitBtn) {
+            consentField.addEventListener('change', function() {
+                submitBtn.disabled = !consentField.checked;
+            });
+        }
+
         contactForm.addEventListener('submit', async function(e) {
             e.preventDefault();
+
+            if (consentField && !consentField.checked) {
+                showNote('Devi accettare l\'Informativa sulla Privacy per inviare la richiesta.', 'error');
+                return;
+            }
 
             const emailField = document.getElementById('email');
             const messaggioField = document.getElementById('messaggio');

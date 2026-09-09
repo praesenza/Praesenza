@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=14">
+    <link rel="stylesheet" href="style.css?v=15">
 </head>
 <body>
     <!-- Header / Navigation -->
@@ -536,7 +536,14 @@
                     ></textarea>
                 </div>
 
-                <button type="submit" class="btn btn-primary btn-block">Invia richiesta</button>
+                <div class="form-consent">
+                    <label class="consent-label">
+                        <input type="checkbox" id="consenso-privacy" name="consenso_privacy" required aria-required="true">
+                        <span>Ho letto e accetto l'<a href="/privacy" target="_blank" rel="noopener">Informativa sulla Privacy</a></span>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block" disabled>Invia richiesta</button>
                 <p class="form-note" data-default-note>Risponderemo entro 24 ore.</p>
             </form>
 
@@ -576,6 +583,7 @@
                         <li><a href="#perche">Perché noi</a></li>
                         <li><a href="#prezzi">Prezzi</a></li>
                         <li><a href="#contatti">Contatti</a></li>
+                        <li><a href="/privacy">Privacy</a></li>
                     </ul>
                 </div>
             </div>
