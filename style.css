@@ -145,13 +145,15 @@ button:focus-visible {
     right: 0;
     background-color: transparent;
     border-bottom: 1px solid transparent;
+    box-shadow: 0 8px 24px rgba(17, 17, 17, 0.05);
     z-index: 1000;
-    transition: background-color 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease;
+    transition: background-color 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease, box-shadow 0.3s ease;
 }
 
 .header.is-scrolled {
     background-color: rgba(255, 253, 250, 0.85);
     backdrop-filter: blur(12px);
+    box-shadow: 0 8px 28px rgba(17, 17, 17, 0.08);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--pz-border);
 }
