@@ -7,6 +7,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.querySelector('.menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
     const navLinks = document.querySelectorAll('.nav-link');
+    const header = document.querySelector('.header');
+
+    // Toggle the header background once the page scrolls past 50px
+    if (header) {
+        const updateHeaderState = () => {
+            header.classList.toggle('is-scrolled', window.scrollY > 50);
+        };
+        updateHeaderState();
+        window.addEventListener('scroll', updateHeaderState, { passive: true });
+    }
 
     // Toggle menu on hamburger click
     if (menuToggle) {
