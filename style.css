@@ -1463,6 +1463,30 @@ button:focus-visible {
     margin-bottom: 16px;
 }
 
+.thanks-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 55vh;
+}
+
+.thanks-content {
+    max-width: 460px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.thanks-content h1 {
+    margin-bottom: 12px;
+}
+
+.thanks-content p {
+    font-size: 1.02rem;
+    line-height: 1.7;
+    color: var(--pz-body);
+    margin-bottom: 32px;
+}
+
 .legal-section li {
     font-size: 0.98rem;
     line-height: 1.7;

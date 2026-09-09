@@ -241,7 +241,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (contactForm) {
         const submitBtn = contactForm.querySelector('button[type="submit"]');
         const formNote = contactForm.querySelector('[data-default-note]');
-        const defaultNoteText = formNote ? formNote.textContent : '';
         const defaultBtnText = submitBtn ? submitBtn.textContent : '';
         const nameRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ\s-]+$/;
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -251,10 +250,6 @@ document.addEventListener('DOMContentLoaded', function() {
             formNote.textContent = text;
             formNote.classList.remove('form-note--success', 'form-note--error');
             if (state) formNote.classList.add('form-note--' + state);
-        }
-
-        function resetNote() {
-            showNote(defaultNoteText, null);
         }
 
         // Live validation on the name field as the user types
@@ -335,8 +330,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 if (response.status === 200 && result.success) {
                     contactForm.reset();
-                    showNote('Grazie! Abbiamo ricevuto la tua richiesta. Ti contatteremo entro 24 ore.', 'success');
-                    setTimeout(resetNote, 6000);
+                    window.location.href = '/grazie';
+                    return;
                 } else {
                     throw new Error(result.message || 'Invio non riuscito');
                 }
