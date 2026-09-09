@@ -425,71 +425,21 @@ button:focus-visible {
     transform: translateY(-4px);
 }
 
-.service-visual {
-    position: relative;
-    aspect-ratio: 16 / 10;
-    border-radius: 12px;
-    overflow: hidden;
-    margin-bottom: 24px;
-    background-color: var(--pz-bg-alt);
-    background-image:
-        linear-gradient(rgba(17, 17, 17, 0.06) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(17, 17, 17, 0.06) 1px, transparent 1px);
-    background-size: 22px 22px;
-}
-
-.service-visual-module {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 15%;
-    aspect-ratio: 1 / 1;
-    transform: translate(-50%, -50%);
-    background: var(--pz-grad);
-    border-radius: 5px;
-    box-shadow: 0 10px 24px rgba(17, 17, 17, 0.3);
-}
-
-.service-visual--dynamic .service-visual-module--ghost-1 {
-    transform: translate(-85%, -70%);
-    background: none;
-    border: 1.5px solid rgba(176, 137, 104, 0.35);
-    box-shadow: none;
-}
-
-.service-visual--dynamic .service-visual-module--ghost-2 {
-    transform: translate(-58%, -50%);
-    background: none;
-    border: 1.5px solid rgba(176, 137, 104, 0.6);
-    box-shadow: none;
-}
-
-.service-visual--care {
-    background-color: var(--pz-accent-soft);
-    background-image: repeating-linear-gradient(45deg, rgba(176, 137, 104, 0.18) 0 1px, transparent 1px 12px);
-}
-
-.service-visual-module--outline {
-    background: none;
-    border: 2px solid var(--pz-accent);
-    box-shadow: none;
-}
-
-.service-icon {
+.card-icon {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 44px;
-    height: 44px;
-    margin-bottom: 20px;
-    background-color: var(--pz-accent-soft);
-    border-radius: 10px;
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 20px;
+    background-color: var(--pz-bg-alt);
+    border-radius: 50%;
     color: var(--pz-accent);
 }
 
-.service-icon svg {
-    width: 22px;
-    height: 22px;
+.card-icon svg {
+    width: 32px;
+    height: 32px;
 }
 
 .service-card h3 {
@@ -865,26 +815,6 @@ button:focus-visible {
     border-radius: 999px;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-}
-
-.tier-bars {
-    display: flex;
-    align-items: flex-end;
-    gap: 8px;
-    height: 64px;
-    margin-bottom: 24px;
-}
-
-.tier-bars span {
-    display: block;
-    width: 22px;
-    border-radius: 3px;
-    background-color: var(--pz-border-strong);
-}
-
-.tier-bars .tier-bar-accent {
-    background: var(--pz-grad);
-    box-shadow: 0 8px 18px rgba(140, 106, 78, 0.3);
 }
 
 .pricing-card h3 {

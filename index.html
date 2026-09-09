@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=11">
+    <link rel="stylesheet" href="style.css?v=12">
 </head>
 <body>
     <!-- Header / Navigation -->
@@ -87,10 +87,7 @@
             <div class="services-grid">
                 <!-- Service 1 -->
                 <article class="service-card service-card--clickable" data-modal="modal-statica" tabindex="0" role="button" aria-haspopup="dialog">
-                    <div class="service-visual service-visual--static" aria-hidden="true">
-                        <span class="service-visual-module"></span>
-                    </div>
-                    <span class="service-icon" aria-hidden="true">
+                    <span class="card-icon" aria-hidden="true">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M7 3h7l5 5v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"/>
                             <path d="M14 3v5h5"/>
@@ -107,12 +104,7 @@
 
                 <!-- Service 2 -->
                 <article class="service-card service-card--clickable" data-modal="modal-dinamica" tabindex="0" role="button" aria-haspopup="dialog">
-                    <div class="service-visual service-visual--dynamic" aria-hidden="true">
-                        <span class="service-visual-module service-visual-module--ghost-1"></span>
-                        <span class="service-visual-module service-visual-module--ghost-2"></span>
-                        <span class="service-visual-module"></span>
-                    </div>
-                    <span class="service-icon" aria-hidden="true">
+                    <span class="card-icon" aria-hidden="true">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M13 3 4 14h6l-1 8 9-12h-6l1-7Z"/>
                         </svg>
@@ -127,10 +119,7 @@
 
                 <!-- Service 3 -->
                 <article class="service-card service-card--clickable" data-modal="modal-manutenzione" tabindex="0" role="button" aria-haspopup="dialog">
-                    <div class="service-visual service-visual--care" aria-hidden="true">
-                        <span class="service-visual-module service-visual-module--outline"></span>
-                    </div>
-                    <span class="service-icon" aria-hidden="true">
+                    <span class="card-icon" aria-hidden="true">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L4 17l3 3 5.3-5.3a4 4 0 0 0 5.4-5.4l-2.75 2.75-2-2Z"/>
                         </svg>
@@ -325,9 +314,13 @@
             <div class="pricing-grid">
                 <!-- Pricing Tier 1 -->
                 <div class="pricing-card">
-                    <div class="tier-bars" aria-hidden="true">
-                        <span style="height:22px"></span>
-                    </div>
+                    <span class="card-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M7 3h7l5 5v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"/>
+                            <path d="M14 3v5h5"/>
+                            <path d="M9 13h6M9 17h6"/>
+                        </svg>
+                    </span>
                     <h3>Essenziale</h3>
                     <div class="pricing-amount">
                         <span class="price">€250</span>
@@ -349,10 +342,14 @@
                 <!-- Pricing Tier 2 -->
                 <div class="pricing-card pricing-featured">
                     <div class="featured-badge">Più richiesto</div>
-                    <div class="tier-bars" aria-hidden="true">
-                        <span style="height:22px"></span>
-                        <span style="height:44px" class="tier-bar-accent"></span>
-                    </div>
+                    <span class="card-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="4.5" width="18" height="16" rx="2"/>
+                            <path d="M3 9.5h18"/>
+                            <path d="M8 3v3M16 3v3"/>
+                            <path d="m8.5 14 2 2 4-4"/>
+                        </svg>
+                    </span>
                     <h3>Professionale</h3>
                     <div class="pricing-amount">
                         <span class="price">€400</span>
@@ -372,11 +369,11 @@
 
                 <!-- Pricing Tier 3 -->
                 <div class="pricing-card">
-                    <div class="tier-bars" aria-hidden="true">
-                        <span style="height:22px"></span>
-                        <span style="height:44px"></span>
-                        <span style="height:64px" class="tier-bar-accent"></span>
-                    </div>
+                    <span class="card-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2.5l2.9 6.3 6.9.7-5.2 4.6 1.6 6.8L12 17.6l-6.2 3.3 1.6-6.8L2.2 9.5l6.9-.7L12 2.5Z"/>
+                        </svg>
+                    </span>
                     <h3>Avanzato</h3>
                     <div class="pricing-amount">
                         <span class="price">Su preventivo</span>
