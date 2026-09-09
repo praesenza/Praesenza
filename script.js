@@ -195,6 +195,23 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // Pricing tooltip (annual maintenance discount) — tap to toggle on mobile,
+    // hover/focus already handled in CSS for desktop
+    const tooltipTriggers = document.querySelectorAll('.pricing-tooltip-trigger');
+
+    tooltipTriggers.forEach(trigger => {
+        trigger.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const isActive = trigger.classList.contains('active');
+            tooltipTriggers.forEach(other => other.classList.remove('active'));
+            if (!isActive) trigger.classList.add('active');
+        });
+    });
+
+    document.addEventListener('click', function() {
+        tooltipTriggers.forEach(trigger => trigger.classList.remove('active'));
+    });
+
     // FAQ accordion — only one question open at a time
     const faqItems = document.querySelectorAll('.faq-item');
 

@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=19">
+    <link rel="stylesheet" href="style.css?v=20">
 </head>
 <body>
     <!-- Header / Navigation -->
@@ -379,10 +379,17 @@
                     </span>
                     <h3>Essenziale</h3>
                     <div class="pricing-amount">
-                        <span class="price">€250</span>
+                        <span class="price">da €250</span>
                     </div>
                     <p class="pricing-maintenance">
                         <span class="price-small">€20</span>/mese manutenzione
+                    </p>
+                    <p class="pricing-annual-note">
+                        Oppure paga 10 mesi, il 12° è gratis
+                        <button type="button" class="pricing-tooltip-trigger" aria-label="Maggiori informazioni sulla manutenzione annuale">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5"/><circle cx="12" cy="8" r="0.6" fill="currentColor" stroke="none"/></svg>
+                            <span class="pricing-tooltip" role="tooltip">Pagando la manutenzione annuale in anticipo, risparmi l'equivalente di 2 mesi.</span>
+                        </button>
                     </p>
                     <ul class="pricing-features">
                         <li>Sito one-page</li>
@@ -391,6 +398,9 @@
                         <li>Form di contatto</li>
                         <li>Mappa Google</li>
                         <li>Ottimizzazione SEO di base</li>
+                        <li>Dominio incluso nella manutenzione</li>
+                        <li>2 cicli di revisione inclusi</li>
+                        <li>Consegna in 2-3 giorni dalla ricezione dei contenuti</li>
                     </ul>
                     <a href="#contatti" class="btn btn-primary btn-block plan-select" data-plan="Essenziale">Scegli questo piano</a>
                 </div>
@@ -408,10 +418,17 @@
                     </span>
                     <h3>Professionale</h3>
                     <div class="pricing-amount">
-                        <span class="price">€400</span>
+                        <span class="price">da €400</span>
                     </div>
                     <p class="pricing-maintenance">
                         <span class="price-small">€30</span>/mese manutenzione
+                    </p>
+                    <p class="pricing-annual-note">
+                        Oppure paga 10 mesi, il 12° è gratis
+                        <button type="button" class="pricing-tooltip-trigger" aria-label="Maggiori informazioni sulla manutenzione annuale">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5"/><circle cx="12" cy="8" r="0.6" fill="currentColor" stroke="none"/></svg>
+                            <span class="pricing-tooltip" role="tooltip">Pagando la manutenzione annuale in anticipo, risparmi l'equivalente di 2 mesi.</span>
+                        </button>
                     </p>
                     <ul class="pricing-features">
                         <li>Tutto della fascia Essenziale</li>
@@ -419,6 +436,9 @@
                         <li>Gestione appuntamenti</li>
                         <li>Notifiche in tempo reale</li>
                         <li>Calendario sincronizzato</li>
+                        <li>Dominio incluso nella manutenzione</li>
+                        <li>2 cicli di revisione inclusi</li>
+                        <li>Consegna in 5-7 giorni dalla ricezione dei contenuti</li>
                     </ul>
                     <a href="#contatti" class="btn btn-primary btn-block plan-select" data-plan="Professionale">Scegli questo piano</a>
                 </div>
@@ -432,8 +452,9 @@
                     </span>
                     <h3>Avanzato</h3>
                     <div class="pricing-amount">
-                        <span class="price">Su preventivo</span>
+                        <span class="price">da €700</span>
                     </div>
+                    <p class="price-note">Prezzo finale definito su preventivo personalizzato</p>
                     <p class="pricing-maintenance">Manutenzione inclusa nel preventivo</p>
                     <ul class="pricing-features">
                         <li>Tutto della fascia Professionale</li>
@@ -442,10 +463,14 @@
                         <li>Copywriting e contenuti curati</li>
                         <li>Ottimizzazione SEO avanzata</li>
                         <li>Supporto prioritario</li>
+                        <li>Dominio incluso nella manutenzione</li>
+                        <li>Tempi e revisioni definiti nel preventivo</li>
                     </ul>
                     <a href="#contatti" class="btn btn-primary btn-block plan-select" data-plan="Avanzato">Richiedi un preventivo</a>
                 </div>
             </div>
+
+            <p class="pricing-vat-note">Prezzi già comprensivi di ogni costo. Nessuna IVA aggiuntiva, nessuna sorpresa in fattura.</p>
         </div>
     </section>
 
@@ -651,6 +676,6 @@
         </div>
     </footer>
 
-    <script src="script.js?v=4"></script>
+    <script src="script.js?v=5"></script>
 </body>
 </html>
