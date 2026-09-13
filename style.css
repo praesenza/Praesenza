@@ -52,7 +52,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
+    font-family: 'Urbanist', 'Segoe UI', sans-serif;
     font-weight: 500;
     line-height: 1.15;
     margin-bottom: 16px;
@@ -691,7 +691,7 @@ button:focus-visible {
 
 .process-number {
     display: block;
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Urbanist', sans-serif;
     font-size: 1.4rem;
     font-weight: 600;
     color: var(--pz-accent);
@@ -987,7 +987,7 @@ button:focus-visible {
     font-size: 2.6rem;
     font-weight: 600;
     color: var(--pz-ink);
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Urbanist', sans-serif;
     letter-spacing: -0.03em;
 }
 
@@ -995,7 +995,7 @@ button:focus-visible {
     font-size: 1.4rem;
     font-weight: 600;
     color: var(--pz-ink);
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Urbanist', sans-serif;
     letter-spacing: -0.02em;
 }
 
