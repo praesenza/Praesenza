@@ -5,27 +5,29 @@
 /* ========== DESIGN TOKENS ========== */
 
 :root {
-    --pz-bg: #2A2320;
-    --pz-bg-alt: #332B26;
-    --pz-surface: #3A3129;
-    --pz-ink: #F0EBE3;
-    --pz-primary: #F0EBE3;
-    --pz-body: #D9D2C6;
+    --pz-bg: #1C1712;
+    --pz-bg-alt: #2E2620;
+    --pz-surface: #2E2620;
+    --pz-ink: #F2ECE3;
+    --pz-primary: #F2ECE3;
+    --pz-body: #D9D0C3;
     --pz-muted: #A69B8C;
-    --pz-border: #443A33;
-    --pz-border-strong: #58493F;
-    --pz-accent: #C17F3E;
-    --pz-accent-dark: #9C6530;
-    --pz-accent-soft: rgba(193, 127, 62, 0.15);
-    --pz-grad: linear-gradient(135deg, #C17F3E 0%, #9C6530 100%);
-    --pz-dark: #201A17;
-    --pz-dark-2: #171310;
+    --pz-border: #4A3F36;
+    --pz-border-strong: #5E5045;
+    --pz-accent: #E0954A;
+    --pz-accent-dark: #B0713A;
+    --pz-accent-soft: rgba(224, 149, 74, 0.15);
+    --pz-teal: #3F6B62;
+    --pz-teal-soft: rgba(63, 107, 98, 0.25);
+    --pz-grad: linear-gradient(135deg, #E0954A 0%, #B0713A 100%);
+    --pz-dark: #17110D;
+    --pz-dark-2: #100B08;
 
     --pz-radius: 16px;
     --pz-radius-sm: 10px;
     --pz-shadow-sm: none;
     --pz-shadow-md: none;
-    --pz-shadow-accent: 0 8px 24px rgba(193, 127, 62, 0.28);
+    --pz-shadow-accent: 0 8px 24px rgba(224, 149, 74, 0.3);
 }
 
 /* ========== RESET & BASE STYLES ========== */
@@ -52,27 +54,32 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Outfit', 'Segoe UI', sans-serif;
-    font-weight: 500;
-    line-height: 1.15;
+    font-family: 'Cinzel', 'Segoe UI', serif;
+    font-weight: 600;
+    line-height: 1.25;
     margin-bottom: 16px;
     color: var(--pz-ink);
-    letter-spacing: -0.02em;
+    letter-spacing: 0.01em;
     text-wrap: balance;
 }
 
 h1 {
-    font-size: clamp(2.5rem, 1.2rem + 5vw, 4.25rem);
-    letter-spacing: -0.035em;
+    font-size: clamp(2.25rem, 1.2rem + 4.5vw, 3.75rem);
+    font-weight: 700;
+    letter-spacing: 0.01em;
 }
 
 h2 {
-    font-size: 2.5rem;
-    letter-spacing: -0.03em;
+    font-size: 2.25rem;
+    letter-spacing: 0.01em;
 }
 
 h3 {
     font-size: 1.5rem;
+}
+
+.accent-text {
+    color: var(--pz-accent);
 }
 
 p {
@@ -92,7 +99,7 @@ a:hover {
 
 a:focus-visible,
 button:focus-visible {
-    outline: 3px solid rgba(193, 127, 62, 0.5);
+    outline: 3px solid rgba(224, 149, 74, 0.5);
     outline-offset: 2px;
 }
 
@@ -127,7 +134,7 @@ button:focus-visible {
     display: inline-block;
     padding: 7px 16px;
     background-color: var(--pz-accent-soft);
-    border: 1px solid rgba(193, 127, 62, 0.25);
+    border: 1px solid rgba(224, 149, 74, 0.25);
     border-radius: 999px;
     color: var(--pz-accent-dark);
     font-size: 0.78rem;
@@ -152,7 +159,7 @@ button:focus-visible {
 }
 
 .header.is-scrolled {
-    background-color: rgba(42, 35, 32, 0.8);
+    background-color: rgba(46, 38, 32, 0.8);
     backdrop-filter: blur(12px) saturate(180%);
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 8px 28px rgba(0, 0, 0, 0.25);
     -webkit-backdrop-filter: blur(12px) saturate(180%);
@@ -269,10 +276,10 @@ button:focus-visible {
 }
 
 .btn-primary:hover {
-    background: linear-gradient(135deg, #9C6530 0%, #7A4F26 100%);
+    background: linear-gradient(135deg, #B0713A 0%, #8A5527 100%);
     color: #FFFFFF;
     transform: translateY(-2px);
-    box-shadow: 0 14px 30px rgba(193, 127, 62, 0.35);
+    box-shadow: 0 14px 30px rgba(224, 149, 74, 0.35);
 }
 
 .btn:disabled {
@@ -280,22 +287,6 @@ button:focus-visible {
     cursor: not-allowed;
     pointer-events: none;
     box-shadow: none;
-}
-
-.btn-light {
-    background: rgba(255, 255, 255, 0.18);
-    backdrop-filter: blur(16px) saturate(180%);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    color: #FFFFFF;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35), 0 8px 24px rgba(0, 0, 0, 0.15);
-}
-
-.btn-light:hover {
-    background: rgba(255, 255, 255, 0.3);
-    color: #FFFFFF;
-    transform: translateY(-2px);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 16px 32px rgba(0, 0, 0, 0.2);
 }
 
 .btn-block {
@@ -306,14 +297,14 @@ button:focus-visible {
 .btn-accent {
     background-color: var(--pz-accent);
     color: #FFFFFF;
-    box-shadow: 0 8px 24px rgba(193, 127, 62, 0.3);
+    box-shadow: 0 8px 24px rgba(224, 149, 74, 0.3);
 }
 
 .btn-accent:hover {
     background-color: var(--pz-accent-dark);
     color: #FFFFFF;
     transform: translateY(-2px);
-    box-shadow: 0 14px 30px rgba(193, 127, 62, 0.4);
+    box-shadow: 0 14px 30px rgba(224, 149, 74, 0.4);
 }
 
 /* ========== HERO SECTION ========== */
@@ -418,18 +409,18 @@ button:focus-visible {
         width: 56px;
         height: 56px;
         border-radius: 50%;
-        background: rgba(193, 127, 62, 0.55);
+        background: rgba(224, 149, 74, 0.55);
         backdrop-filter: blur(16px) saturate(180%);
         -webkit-backdrop-filter: blur(16px) saturate(180%);
         border: 1px solid rgba(255, 255, 255, 0.4);
         color: #FFFFFF;
-        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 10px 28px rgba(193, 127, 62, 0.35);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 10px 28px rgba(224, 149, 74, 0.35);
         z-index: 900;
         transition: transform 0.2s ease, background-color 0.2s ease;
     }
 
     .phone-fab:hover {
-        background: rgba(193, 127, 62, 0.75);
+        background: rgba(224, 149, 74, 0.75);
         transform: translateY(-2px);
     }
 
@@ -458,7 +449,7 @@ button:focus-visible {
 
 .services {
     padding: 104px 32px;
-    background-color: var(--pz-bg);
+    background-color: var(--pz-bg-alt);
 }
 
 .services-grid {
@@ -469,16 +460,15 @@ button:focus-visible {
 
 .service-card {
     padding: 28px;
-    background-color: var(--pz-bg-alt);
+    background-color: var(--pz-bg);
     border: 1px solid var(--pz-border);
     border-radius: var(--pz-radius);
     box-shadow: var(--pz-shadow-sm);
-    transition: transform 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+    transition: transform 0.25s ease, border-color 0.25s ease;
 }
 
 .service-card:hover {
-    border-color: rgba(193, 127, 62, 0.5);
-    background-color: var(--pz-surface);
+    border-color: rgba(224, 149, 74, 0.55);
     transform: translateY(-4px);
 }
 
@@ -492,6 +482,14 @@ button:focus-visible {
     background-color: var(--pz-bg-alt);
     border-radius: 50%;
     color: var(--pz-accent);
+}
+
+.services .card-icon {
+    color: var(--pz-teal);
+}
+
+.pricing .card-icon {
+    background-color: var(--pz-bg);
 }
 
 .card-icon svg {
@@ -555,7 +553,7 @@ button:focus-visible {
     max-height: 85vh;
     overflow-y: auto;
     padding: 36px;
-    background: rgba(42, 35, 32, 0.8);
+    background: rgba(46, 38, 32, 0.8);
     backdrop-filter: blur(24px) saturate(180%);
     -webkit-backdrop-filter: blur(24px) saturate(180%);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -612,31 +610,59 @@ button:focus-visible {
 
 .why-section {
     padding: 104px 32px;
-    background-color: var(--pz-bg-alt);
+    background-color: var(--pz-bg);
 }
 
-.why-grid {
+.why-columns {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
+    grid-template-columns: 0.85fr 1.4fr;
+    gap: 64px;
+    align-items: start;
 }
 
-.why-item {
-    padding: 32px;
-    background-color: var(--pz-surface);
-    border: 1px solid var(--pz-border);
-    border-radius: var(--pz-radius);
-    border-left: 3px solid var(--pz-accent);
+.why-intro {
+    position: sticky;
+    top: 148px;
 }
 
-.why-item h3 {
+.why-intro .section-title {
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.why-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.why-row {
+    padding: 32px 0;
+    border-top: 1px solid var(--pz-teal-soft);
+}
+
+.why-row:first-child {
+    padding-top: 0;
+    border-top: none;
+}
+
+.why-mark {
+    display: block;
+    width: 30px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: var(--pz-accent);
+    margin-bottom: 18px;
+}
+
+.why-row h3 {
     font-size: 1.3rem;
     margin-bottom: 10px;
 }
 
-.why-item p {
-    font-size: 0.95rem;
+.why-row p {
+    font-size: 0.98rem;
     line-height: 1.7;
+    max-width: 520px;
     margin-bottom: 0;
 }
 
@@ -644,7 +670,7 @@ button:focus-visible {
 
 .process {
     padding: 104px 32px;
-    background-color: var(--pz-bg);
+    background-color: var(--pz-bg-alt);
 }
 
 .process-grid {
@@ -660,16 +686,17 @@ button:focus-visible {
 
 .process-number {
     display: block;
-    font-family: 'Outfit', sans-serif;
-    font-size: 1.4rem;
-    font-weight: 600;
+    font-family: 'Cinzel', serif;
+    font-size: 3.4rem;
+    font-weight: 700;
+    line-height: 1;
     color: var(--pz-accent);
-    margin-bottom: 16px;
+    margin-bottom: 20px;
 }
 
 .process-bar {
-    height: 4px;
-    background-color: var(--pz-border);
+    height: 3px;
+    background-color: var(--pz-teal-soft);
     border-radius: 2px;
     overflow: hidden;
     margin-bottom: 16px;
@@ -697,7 +724,7 @@ button:focus-visible {
 .cta-banner {
     padding: 72px 32px;
     background:
-        radial-gradient(circle at 80% 30%, rgba(193, 127, 62, 0.16) 0%, transparent 55%),
+        radial-gradient(circle at 80% 30%, rgba(224, 149, 74, 0.16) 0%, transparent 55%),
         linear-gradient(120deg, var(--pz-dark) 0%, var(--pz-dark-2) 100%);
 }
 
@@ -720,7 +747,7 @@ button:focus-visible {
 
 .about {
     padding: 104px 32px;
-    background-color: var(--pz-bg-alt);
+    background-color: var(--pz-bg);
 }
 
 .about-grid {
@@ -789,12 +816,12 @@ button:focus-visible {
 
 .quiz {
     padding: 104px 32px;
-    background-color: var(--pz-bg);
+    background-color: var(--pz-bg-alt);
 }
 
 .quiz-card {
     position: relative;
-    background-color: var(--pz-surface);
+    background-color: var(--pz-bg);
     border: 1px solid var(--pz-border);
     border-radius: var(--pz-radius);
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
@@ -903,19 +930,18 @@ button:focus-visible {
     border-radius: var(--pz-radius);
     box-shadow: var(--pz-shadow-sm);
     position: relative;
-    transition: transform 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+    transition: transform 0.25s ease, border-color 0.25s ease;
 }
 
 .pricing-card:hover {
-    border-color: rgba(193, 127, 62, 0.45);
-    background-color: var(--pz-surface);
+    border-color: rgba(224, 149, 74, 0.5);
     transform: translateY(-4px);
 }
 
 .pricing-featured {
     border-color: var(--pz-accent);
-    background-color: var(--pz-surface);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 14px 44px rgba(156, 101, 48, 0.25);
+    background-color: var(--pz-bg-alt);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 14px 44px rgba(176, 113, 58, 0.3);
 }
 
 .pricing-featured::before {
@@ -953,18 +979,18 @@ button:focus-visible {
 
 .price {
     font-size: 2.6rem;
-    font-weight: 600;
-    color: var(--pz-ink);
-    font-family: 'Outfit', sans-serif;
-    letter-spacing: -0.03em;
+    font-weight: 700;
+    color: var(--pz-accent);
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.01em;
 }
 
 .price-small {
     font-size: 1.4rem;
     font-weight: 600;
     color: var(--pz-ink);
-    font-family: 'Outfit', sans-serif;
-    letter-spacing: -0.02em;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.01em;
 }
 
 .pricing-maintenance {
@@ -1022,7 +1048,7 @@ button:focus-visible {
     transform: translateX(-50%) translateY(4px);
     width: 220px;
     padding: 10px 12px;
-    background-color: #1C1613;
+    background-color: #17110D;
     color: var(--pz-ink);
     font-size: 0.78rem;
     font-weight: 400;
@@ -1043,7 +1069,7 @@ button:focus-visible {
     left: 50%;
     transform: translateX(-50%);
     border: 6px solid transparent;
-    border-top-color: #1C1613;
+    border-top-color: #17110D;
 }
 
 .pricing-tooltip-trigger:hover .pricing-tooltip,
@@ -1081,7 +1107,7 @@ button:focus-visible {
 
 .pricing-features li:before {
     content: "✓ ";
-    color: var(--pz-accent);
+    color: var(--pz-teal);
     font-weight: 700;
     margin-right: 8px;
 }
@@ -1100,7 +1126,7 @@ button:focus-visible {
 }
 
 .faq-item {
-    background-color: var(--pz-surface);
+    background-color: var(--pz-bg);
     border: 1px solid var(--pz-border);
     border-radius: var(--pz-radius);
     box-shadow: var(--pz-shadow-sm);
@@ -1109,7 +1135,7 @@ button:focus-visible {
 }
 
 .faq-item.active {
-    border-color: rgba(193, 127, 62, 0.45);
+    border-color: rgba(224, 149, 74, 0.45);
 }
 
 .faq-question {
@@ -1177,12 +1203,12 @@ button:focus-visible {
         circle,
         transparent 0,
         transparent 58px,
-        rgba(193, 127, 62, 0.16) 60px,
-        rgba(193, 127, 62, 0.16) 62px,
+        rgba(224, 149, 74, 0.16) 60px,
+        rgba(224, 149, 74, 0.16) 62px,
         transparent 64px,
         transparent 178px,
-        rgba(193, 127, 62, 0.09) 180px,
-        rgba(193, 127, 62, 0.09) 182px,
+        rgba(224, 149, 74, 0.09) 180px,
+        rgba(224, 149, 74, 0.09) 182px,
         transparent 184px,
         transparent 240px
     );
@@ -1198,7 +1224,7 @@ button:focus-visible {
 .contact-form {
     margin-bottom: 32px;
     padding: 36px;
-    background-color: var(--pz-bg-alt);
+    background-color: var(--pz-bg);
     border: 1px solid var(--pz-border);
     border-radius: var(--pz-radius);
     box-shadow: var(--pz-shadow-sm);
@@ -1225,7 +1251,7 @@ button:focus-visible {
     font-family: 'Inter', sans-serif;
     font-size: 1rem;
     color: var(--pz-ink);
-    background-color: var(--pz-bg);
+    background-color: var(--pz-bg-alt);
     transition: all 0.2s ease;
 }
 
@@ -1237,7 +1263,7 @@ button:focus-visible {
 .form-group input:focus,
 .form-group textarea:focus {
     border-color: var(--pz-accent);
-    box-shadow: 0 0 0 3px rgba(193, 127, 62, 0.2);
+    box-shadow: 0 0 0 3px rgba(224, 149, 74, 0.2);
     outline: none;
 }
 
@@ -1245,8 +1271,8 @@ button:focus-visible {
 .form-group input:-webkit-autofill:hover,
 .form-group input:-webkit-autofill:focus {
     -webkit-text-fill-color: var(--pz-ink);
-    -webkit-box-shadow: 0 0 0 1000px var(--pz-bg) inset;
-    box-shadow: 0 0 0 1000px var(--pz-bg) inset;
+    -webkit-box-shadow: 0 0 0 1000px var(--pz-bg-alt) inset;
+    box-shadow: 0 0 0 1000px var(--pz-bg-alt) inset;
     caret-color: var(--pz-ink);
     transition: background-color 9999s ease-in-out 0s;
 }
@@ -1291,7 +1317,7 @@ button:focus-visible {
 .form-note--success {
     color: var(--pz-ink);
     background-color: var(--pz-accent-soft);
-    border: 1px solid rgba(193, 127, 62, 0.4);
+    border: 1px solid rgba(224, 149, 74, 0.4);
 }
 
 .form-note--error {
@@ -1345,7 +1371,7 @@ button:focus-visible {
     align-items: center;
     text-align: center;
     padding: 32px;
-    background-color: var(--pz-surface);
+    background-color: var(--pz-bg);
     border: 1px solid var(--pz-border);
     border-radius: var(--pz-radius);
 }
@@ -1470,6 +1496,7 @@ button:focus-visible {
 
 .footer {
     background: linear-gradient(135deg, var(--pz-dark) 0%, var(--pz-dark-2) 100%);
+    border-top: 1px solid var(--pz-teal-soft);
     color: rgba(240, 235, 227, 0.75);
     padding: 56px 32px 24px;
 }
@@ -1495,7 +1522,7 @@ button:focus-visible {
 
 .footer-logo .logo-img {
     height: 72px;
-    filter: drop-shadow(0 0 14px rgba(193, 127, 62, 0.4));
+    filter: drop-shadow(0 0 14px rgba(224, 149, 74, 0.4));
 }
 
 .footer-links ul {
@@ -1550,8 +1577,13 @@ button:focus-visible {
         grid-template-columns: 1fr;
     }
 
-    .why-grid {
+    .why-columns {
         grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .why-intro {
+        position: static;
     }
 
     .process-grid {
@@ -1625,7 +1657,7 @@ button:focus-visible {
         top: 112px;
         left: 0;
         right: 0;
-        background-color: rgba(42, 35, 32, 0.92);
+        background-color: rgba(46, 38, 32, 0.92);
         backdrop-filter: blur(20px) saturate(160%);
         -webkit-backdrop-filter: blur(20px) saturate(160%);
         flex-direction: column;
@@ -1732,9 +1764,12 @@ button:focus-visible {
     }
 
     .service-card,
-    .pricing-card,
-    .why-item {
+    .pricing-card {
         padding: 24px;
+    }
+
+    .why-row {
+        padding: 24px 0;
     }
 
     .quiz-card {
