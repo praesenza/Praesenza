@@ -336,7 +336,7 @@ button:focus-visible {
     height: 145%;
     width: auto;
     max-width: none;
-    opacity: 0.05;
+    opacity: 0.09;
     filter: grayscale(1) contrast(0.9);
     pointer-events: none;
     z-index: 0;
@@ -1541,25 +1541,6 @@ button:focus-visible {
 
     .hero {
         padding: 96px 32px 72px;
-        justify-content: center;
-    }
-
-    .hero-content {
-        max-width: 640px;
-        text-align: center;
-        margin-left: 0;
-    }
-
-    .hero-subtitle {
-        margin: 0 auto 32px;
-    }
-
-    .hero-cta-group {
-        justify-content: center;
-    }
-
-    .hero-watermark {
-        opacity: 0.04;
     }
 
     .legal-page {
@@ -1604,6 +1585,30 @@ button:focus-visible {
 
     .footer-links ul {
         justify-content: flex-start;
+    }
+}
+
+@media (max-width: 900px) {
+    .hero {
+        justify-content: center;
+    }
+
+    .hero-content {
+        max-width: 640px;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .hero-subtitle {
+        margin: 0 auto 32px;
+    }
+
+    .hero-cta-group {
+        justify-content: center;
+    }
+
+    .hero-watermark {
+        opacity: 0.05;
     }
 }
 
