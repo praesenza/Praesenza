@@ -52,12 +52,13 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Urbanist', 'Segoe UI', sans-serif;
+    font-family: 'Outfit', 'Segoe UI', sans-serif;
     font-weight: 500;
     line-height: 1.15;
     margin-bottom: 16px;
     color: var(--pz-ink);
     letter-spacing: -0.02em;
+    text-wrap: balance;
 }
 
 h1 {
@@ -691,7 +692,7 @@ button:focus-visible {
 
 .process-number {
     display: block;
-    font-family: 'Urbanist', sans-serif;
+    font-family: 'Outfit', sans-serif;
     font-size: 1.4rem;
     font-weight: 600;
     color: var(--pz-accent);
@@ -987,7 +988,7 @@ button:focus-visible {
     font-size: 2.6rem;
     font-weight: 600;
     color: var(--pz-ink);
-    font-family: 'Urbanist', sans-serif;
+    font-family: 'Outfit', sans-serif;
     letter-spacing: -0.03em;
 }
 
@@ -995,7 +996,7 @@ button:focus-visible {
     font-size: 1.4rem;
     font-weight: 600;
     color: var(--pz-ink);
-    font-family: 'Urbanist', sans-serif;
+    font-family: 'Outfit', sans-serif;
     letter-spacing: -0.02em;
 }
 
