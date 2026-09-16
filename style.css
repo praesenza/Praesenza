@@ -319,71 +319,36 @@ button:focus-visible {
 /* ========== HERO SECTION ========== */
 
 .hero {
-    padding: 120px 32px 104px;
+    padding: 140px 32px 120px;
     margin-top: 112px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     position: relative;
     overflow: hidden;
-    background:
-        radial-gradient(55% 48% at 88% 0%, rgba(176, 137, 104, 0.1), transparent 70%),
-        var(--pz-bg);
+    background: var(--pz-bg);
 }
 
-.hero-bg {
+.hero-watermark {
     position: absolute;
-    inset: 0;
-    z-index: 0;
+    top: 50%;
+    right: -6%;
+    transform: translateY(-50%);
+    height: 145%;
+    width: auto;
+    max-width: none;
+    opacity: 0.05;
+    filter: grayscale(1) contrast(0.9);
     pointer-events: none;
-}
-
-.hero-bg svg {
-    width: 100%;
-    height: 100%;
-}
-
-.hero-bg-lines path {
-    fill: none;
-    stroke: var(--pz-ink);
-    stroke-width: 1.2;
-    opacity: 0.07;
-}
-
-.hero-bg-accent path {
-    fill: none;
-    stroke: url(#heroAccent);
-    stroke-width: 2.5;
-    opacity: 0.55;
-}
-
-.hero-bg-dots {
-    position: absolute;
-    right: 8%;
-    bottom: 18%;
-    display: flex;
-    gap: 8px;
-}
-
-.hero-bg-dots span {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background-color: var(--pz-accent);
-}
-
-.hero-bg-dots span:nth-child(2) {
-    background-color: rgba(176, 137, 104, 0.6);
-}
-
-.hero-bg-dots span:nth-child(3) {
-    background-color: rgba(176, 137, 104, 0.3);
+    z-index: 0;
+    user-select: none;
 }
 
 .hero-content {
-    max-width: 760px;
-    text-align: center;
+    max-width: 640px;
+    text-align: left;
     position: relative;
     z-index: 1;
+    margin-left: 6%;
 }
 
 .hero-title {
@@ -394,13 +359,13 @@ button:focus-visible {
     font-size: 1.15rem;
     line-height: 1.7;
     color: var(--pz-body);
-    margin: 0 auto 32px;
-    max-width: 580px;
+    margin: 0 0 32px;
+    max-width: 480px;
 }
 
 .hero-cta-group {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .hero-cta {
@@ -1576,6 +1541,25 @@ button:focus-visible {
 
     .hero {
         padding: 96px 32px 72px;
+        justify-content: center;
+    }
+
+    .hero-content {
+        max-width: 640px;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .hero-subtitle {
+        margin: 0 auto 32px;
+    }
+
+    .hero-cta-group {
+        justify-content: center;
+    }
+
+    .hero-watermark {
+        opacity: 0.04;
     }
 
     .legal-page {
@@ -1687,11 +1671,7 @@ button:focus-visible {
         font-size: 1.02rem;
     }
 
-    .hero-bg-lines path:nth-child(n + 4) {
-        display: none;
-    }
-
-    .hero-bg-dots {
+    .hero-watermark {
         display: none;
     }
 
